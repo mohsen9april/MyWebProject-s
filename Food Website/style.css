@@ -87,7 +87,7 @@ display: none;}
 
 #search-form {
     position: fixed;
-    top: 0;
+    top: -110%;
     left: 0;
     height: 100%;
     width: 100%;
@@ -97,6 +97,10 @@ display: none;}
     align-items: center;
     justify-content: center;
     padding: 0 1rem;
+}
+
+#search-form.active {
+    top: 0;
 }
 
 #search-form #search-box {
@@ -125,6 +129,15 @@ display: none;}
 
 #search-form label:hover {
     color: var(--green);
+}
+
+#search-form #close {
+    position: absolute;
+    color: #fff;
+    cursor: pointer;
+    top: 2rem;
+    right: 3rem;
+    font-size: 5rem;
 }
 
 /* media queries */
@@ -166,6 +179,13 @@ display: none;}
         font-size: 2rem;
         background: #eee;
     }
+
+    #search-form #search-box {
+        width: 90%;
+        margin: 0 1rem;
+    }
+
+
 }
 
 @media (max-width: 991px) {
